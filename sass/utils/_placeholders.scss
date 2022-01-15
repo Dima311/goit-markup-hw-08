@@ -1,0 +1,29 @@
+// Link template
+%link {
+  text-decoration: none;
+  font-style: normal;
+  color: $primaryTextColor;
+}
+
+// List template
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Transition
+%transition {
+  transition-property: color;
+  transition-duration: $time;
+  transition-timing-function: $timeFunction;
+}
+
+// Smm link
+%smmLink {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px 0;
+  border-radius: 50%;
+}

@@ -1,0 +1,39 @@
+// Team section
+.team {
+  @include centredFlex(space-between, start);
+  flex-wrap: wrap;
+
+  &__item {
+    text-align: center;
+    background-color: $primryBackgroudColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__content-wrap {
+    padding: 30px 0;
+  }
+
+  &__content {
+    margin: 0 0 16px 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $titleColor;
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+  }
+}
