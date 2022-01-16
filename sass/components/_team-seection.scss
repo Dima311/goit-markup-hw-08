@@ -1,7 +1,27 @@
 // Team section
 .team {
-  @include centredFlex(space-between, start);
-  flex-wrap: wrap;
+  @extend %section;
+
+  &--bg {
+    background-color: #f5f4fa;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 
   &__item {
     text-align: center;
@@ -9,21 +29,58 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (max-width: $tablet - 1px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+
+    &:not(:nth-child(2n)) {
+      @media screen and (min-width: $tablet) {
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+    }
+
+    &:not(:last-child) {
+      @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+      }
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      @media screen and (min-width: $tablet), (max-width: $desktop - 1) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__img {
     display: block;
+    width: 100%;
   }
 
   &__content-wrap {
-    padding: 30px 0;
+    padding: 30px 0 24px 0;
   }
 
   &__content {
     margin: 0 0 16px 0;
   }
 
-  &__title {
+  &__text-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;

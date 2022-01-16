@@ -1,9 +1,32 @@
 // Do section
 .do {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: none;
+  @extend %section;
 
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+
+  &--no-padding {
+    // padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   &__item {
     position: relative;
   }

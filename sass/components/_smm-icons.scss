@@ -44,7 +44,8 @@
     @extend %transition;
   }
 
-  &__link:hover {
+  &__link:hover,
+  &__link:focus {
     background-color: $acentColor;
     color: $inversTextColor;
   }

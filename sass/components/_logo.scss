@@ -9,6 +9,10 @@
   letter-spacing: 0.03em;
   color: $acentColor;
 
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
+
   &--nav {
     color: $secondaryTextColor;
   }
