@@ -1,6 +1,25 @@
 // Smm footer icons
 .smm {
-  @include centredFlex();
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    // width: 25%;
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    @extend %list;
+    @include centredFlex(center);
+
+    @media screen and (min-width: $desktop) {
+      justify-content: start;
+    }
+  }
 
   &__item:not(:last-child) {
     margin-right: 10px;

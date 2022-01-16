@@ -4,16 +4,51 @@
   padding: 60px 0;
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    @extend %container;
+  }
+  &__wrap {
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
+    // display: flex;
+    // align-items: baseline;
+  }
+
+  &__adress-item {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      // width: 25%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-item {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 93px;
+    }
   }
 
   &__item:first-child {
-    margin-right: 70px;
+    // margin-right: 70px;
   }
 
   &__item:last-child {
-    margin-left: 93px;
+    // margin-left: 93px;
   }
 
   &__logo {
@@ -34,6 +69,6 @@
     position: relative;
 
     padding: 10px 62px 10px 29px;
-    margin: 0;
+    margin: 0 auto;
   }
 }
