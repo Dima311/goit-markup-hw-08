@@ -3,6 +3,8 @@
   border-bottom: 1px solid $secondaryBorderColor;
 
   &__container {
+    @extend %container;
+
     @include centredFlex(space-between);
   }
 }
