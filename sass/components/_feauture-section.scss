@@ -47,15 +47,13 @@
     }
 
     &:not(:nth-last-child(-n + 2)) {
-      @media screen and (max-width: $desktop - 1), (min-width: $tablet) {
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
         margin-bottom: 30px;
       }
     }
   }
 
   &__icon-block {
-    // @include centredFlex(center);
-    // height: 120px;
     padding: 25px 0;
     border-radius: 4px;
     margin-bottom: 30px;

@@ -40,10 +40,6 @@
       }
     }
 
-    @media screen and (min-width: $desktop) {
-      margin-bottom: 0;
-    }
-
     &:not(:nth-child(2n)) {
       @media screen and (min-width: $tablet) {
         margin-right: 30px;
@@ -61,7 +57,7 @@
     }
 
     &:not(:nth-last-child(-n + 2)) {
-      @media screen and (min-width: $tablet), (max-width: $desktop - 1) {
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
         margin-bottom: 30px;
       }
     }
