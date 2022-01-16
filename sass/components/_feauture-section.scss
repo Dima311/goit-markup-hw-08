@@ -1,22 +1,61 @@
 // Features section
 .features {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %section;
 
-  &__item {
-    width: 270px;
+  &__container {
+    @extend %container;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__title {
+    @extend %title;
+  }
+
+  &__list {
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    &:not(:nth-child(2n)) {
+      @media screen and (min-width: $tablet) {
+        margin-right: 30px;
+      }
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+    }
+
+    &:not(:last-child) {
+      @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__icon-block {
-    @include centredFlex(center);
-    height: 120px;
-    background-color: $secondaryBackgroundColor;
+    // @include centredFlex(center);
+    // height: 120px;
+    padding: 25px 0;
     border-radius: 4px;
     margin-bottom: 30px;
+
+    background-color: $secondaryBackgroundColor;
+    text-align: center;
   }
 
   &__icon {
@@ -24,12 +63,15 @@
     height: 70px;
   }
 
-  &__title {
+  &__icon-title {
     font-weight: bold;
+    font-size: 14px;
     line-height: 1.2;
     text-transform: uppercase;
     color: $titleColor;
     margin: 0 0 10px 0;
+
+    text-align: center;
   }
 
   &__text {
