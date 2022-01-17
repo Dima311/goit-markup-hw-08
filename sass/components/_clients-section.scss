@@ -1,10 +1,9 @@
 // Clients section
 .clients {
-  display: none;
   @extend %section;
 
-  @media screen and (min-width: $tablet) {
-    display: block;
+  @media screen and (max-width: $tablet) {
+    display: none;
   }
 
   &__container {

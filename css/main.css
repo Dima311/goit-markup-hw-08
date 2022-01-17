@@ -782,13 +782,9 @@ body {
   margin: 0;
 }
 
-.do {
-  display: none;
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .do {
-    display: block;
+    display: none;
   }
 }
 
@@ -915,13 +911,9 @@ body {
   margin: 0;
 }
 
-.clients {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .clients {
-    display: block;
+    display: none;
   }
 }
 
