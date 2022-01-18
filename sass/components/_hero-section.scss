@@ -1,6 +1,8 @@
 // Hero
 .hero {
-  max-width: 1600px;
+  @extend %section;
+
+  // max-width: 1600px;
   margin: 0 auto;
   background-image: linear-gradient(
       to right,
@@ -9,8 +11,12 @@
     ),
     url("../images/head.jpg");
   background-size: cover;
-  padding: 200px 0;
+  padding: 118px 0;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    padding: 200px 0;
+  }
 
   &__container {
     @extend %container;
@@ -18,11 +24,14 @@
 
   &__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $inversTextColor;
     margin: 0 0 30px 0;
   }
+
+  //   font-size: 44px;
+  // line-height: 1.4;
 }
