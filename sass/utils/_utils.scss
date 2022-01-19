@@ -14,8 +14,11 @@ body {
   color: $primaryTextColor;
   background-color: $primryBackgroudColor;
   font-family: $primaryFont, "Arial", sans-serif;
-}
 
+  &.modal-open {
+    overflow: hidden;
+  }
+}
 .link {
   @extend %link;
 }
