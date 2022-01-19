@@ -24,13 +24,23 @@
             <nav class="nav">
                 <a href="./index.html" class="logo">Web<span class="logo--nav">Studio</span>
                 </a>
-                <button class="nav__button nav__button--is-open" type="button">
+                <button 
+                class="nav__button" 
+                type="button" 
+                aria-expended="false"
+                aria-controls="nav__mobile-menu"
+                data-menu-button                
+                >
                     <svg class="nav__menu-icon" width="40" height="40" aria-label="Переключатель моильного меню">
                         <use class="nav__icon-menu" href="./images/symbol-defs.svg#burger"></use>
                         <use class="nav__icon-cross" href="./images/symbol-defs.svg#close"></use>
                     </svg>
                 </button>
-                <!-- <ul class="nav__list list">
+
+                <div class="nav__mobile-menu" id="nav__mobile-menu" data-menu>
+                    Контент меню
+                </div>
+                <ul class="nav__list">
 
                     <li class="nav__item">
                         <a href="./index.html" class="link nav__link--current">Студия</a>
@@ -44,7 +54,7 @@
                     <li class="nav__item">
                         <a href="#" class="link">Контакты</a>
                     </li>
-                </ul> -->
+                </ul>
             </nav>
 
             <!-- Auth -->
@@ -509,6 +519,85 @@
         </div>
     
     </footer>
+
+    <!-- Modal Window section -->
+    <div data-modal class="backdrop is-hidden">
+        <div class="backdrop__modal">
+            <div data-modal-close class="backdrop__close">
+                <svg class="backdrop__close-ico">
+                    <use href="./images/symbol-defs.svg#close"></use>
+                </svg>
+            </div>
     
+            <!-- Form -->
+            <form class="form">
+    
+                <p class="form__title">Оставьте свои данные, мы вам перезвоним</p>
+    
+                <div role="group">
+    
+                    <!-- First Name -->
+                    <div class="form__field">
+                        <label class="form__label" for="name">Имя</label>
+                        <input class="form__input" type="text" name="name" id="name">
+    
+                        <svg class="form__ico">
+                            <use href="./images/symbol-defs.svg#fname"></use>
+                        </svg>
+    
+                    </div>
+    
+                    <!-- Phone number -->
+                    <div class="form__field">
+                        <label class="form__label" for="phone">Телефон</label>
+                        <input class="form__input" type="tel" name="phone" id="phone">
+    
+                        <svg class="form__ico">
+                            <use href="./images/symbol-defs.svg#fphone"></use>
+                        </svg>
+    
+                    </div>
+    
+                    <!-- Email -->
+                    <div class="form__field">
+                        <label class="form__label" for="email">Почта</label>
+                        <input class="form__input" type="email" name="email" id="email">
+    
+                        <svg class="form__ico">
+                            <use href="./images/symbol-defs.svg#fmail"></use>
+                        </svg>
+    
+                    </div>
+    
+                    <!-- Comment text area -->
+                    <div class="form__field form__field--textarea-block">
+                        <label class="form__label" for="comment">Комментарий</label>
+                        <textarea class="form__comment" rows="5" name="comment" id="comment"
+                            placeholder="Введите текст"></textarea>
+                    </div>
+    
+                    <!-- Chekbox -->
+                    <label class="form__checkbox-label">
+                        <input class="form__checkbox" type="checkbox" value="conditions" name="conditions">
+                        <svg class="form__checkbox-icon">
+                            <use href="./images/symbol-defs.svg#iconcheck"></use>
+                        </svg>
+                        Соглашаюсь с рассылкой и принимаю <a class="form__conditions-link" href="">Условия договора</a>
+                    </label>
+    
+                </div>
+    
+                <!-- Submit button -->
+                <div class="form__button-block">
+                    <button class="btn form__btn" type="submit">Отправить</button>
+                </div>
+    
+            </form>
+    
+        </div>
+    </div>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

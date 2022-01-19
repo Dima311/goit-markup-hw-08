@@ -4,7 +4,7 @@
   color: #757575;
 }
 
-.smm__list, .switch__list, .list, .features__list, .do__list, .team__list, .clients__list, .portfolio {
+.nav__list, .smm__list, .switch__list, .list, .features__list, .do__list, .team__list, .clients__list, .portfolio {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -28,8 +28,14 @@
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
-  padding: 16px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 16px 0;
+  }
 }
 
 .logo {
@@ -67,7 +73,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .nav .link:hover,
@@ -84,13 +89,26 @@
   height: 4px;
   border-radius: 2px;
   background-color: #2196f3;
+  margin-bottom: -1px;
 }
 
 .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    margin-left: 93px;
+  }
 }
 
 .nav__list .link {
@@ -122,8 +140,37 @@
   border: none;
 }
 
+@media screen and (min-width: 768px) {
+  .nav__button {
+    display: none;
+  }
+}
+
 .nav__button .nav__icon-cross {
   display: none;
+}
+
+.nav__button.is-open .nav__icon-cross {
+  display: block;
+}
+
+.nav__button.is-open .nav__icon-menu {
+  display: none;
+}
+
+.nav__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.nav__mobile-menu.is-open {
+  display: block;
 }
 
 .auth {
