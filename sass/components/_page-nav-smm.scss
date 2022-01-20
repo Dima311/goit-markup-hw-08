@@ -1,0 +1,35 @@
+// Mobile smm links
+.social {
+  @extend %list;
+  @include centredFlex();
+  // flex-wrap: wrap;
+  flex-grow: 1;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    @extend %link;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $acentColor;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 18px;
+    }
+  }
+
+  // &__link:not(:last-child) {
+  //   margin-right: 10px;
+  // }
+
+  &__separator {
+    color: rgba(33, 33, 33, 0.2);
+    margin: 0 10px;
+  }
+}
