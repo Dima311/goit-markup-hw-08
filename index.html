@@ -178,15 +178,21 @@
         
                 <ul class="do__list">
                     <li class="do__item">
-                        <img src="./images/img1.jpg" class="do__img" width="370" alt="Планшет с клавиатурой">
+                        <img 
+                        srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
+                        src="./images/img1.jpg" class="do__img" width="370" alt="Планшет с клавиатурой">
                         <div class="do__text">Десктопные приложения</div>
                     </li>
                     <li class="do__item">
-                        <img src="./images/img2.jpg" class="do__img" width="370" alt="Ноутбук">
+                        <img 
+                        srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
+                        src="./images/img2.jpg" class="do__img" width="370" alt="Ноутбук">
                         <div class="do__text">Мобильные приложения</div>
                     </li>
                     <li class="do__item">
-                        <img src="./images/img3.jpg" class="do__img" width="370" alt="Планшет">
+                        <img 
+                        srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                        src="./images/img3.jpg" class="do__img" width="370" alt="Планшет">
                         <div class="do__text">Дизайнерские решения</div>
                     </li>
                 </ul>
@@ -203,7 +209,13 @@
                 <ul class="team__list">
                     <li class="team__item">
         
-                        <img src="./images/ph1.jpg" class="team__img" alt="Игорь Демьяненко">
+                        <picture>
+                            <source srcset="./images/ph1.jpg 1x, ./images/ph1@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/ph1450.jpg 1x, ./images/ph1450@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="./images/ph1354.jpg 1x, ./images/ph1354@2x.jpg 2x" media="(min-width: 768px)">
+                            <img src="./images/ph1.jpg" class="product__img" alt="Игорь Демьяненко">
+                        </picture>
+                        <!-- <img src="./images/ph1.jpg" class="team__img" alt="Игорь Демьяненко"> -->
         
                         <div class="team__content-wrap">
                             <div class="team__content">
@@ -249,7 +261,12 @@
         
                     </li>
                     <li class="team__item list">
-                        <img src="./images/ph2.jpg" class="team__img" alt="Ольга Репина">
+                        <picture>
+                            <source srcset="./images/ph2.jpg 1x, ./images/ph2@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/ph2450.jpg 1x, ./images/ph2450@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="./images/ph2354.jpg 1x, ./images/ph2354@2x.jpg 2x" media="(min-width: 768px)">
+                            <img src="./images/ph2.jpg" class="product__img" alt="Ольга Репина">
+                        </picture>
         
                         <div class="team__content-wrap">
                             <div class="team__content">
@@ -295,7 +312,12 @@
         
                     </li>
                     <li class="team__item list">
-                        <img src="./images/ph3.jpg" class="team__img" alt="Николай Тарасов">
+                        <picture>
+                            <source srcset="./images/ph3.jpg 1x, ./images/ph3@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/ph3450.jpg 1x, ./images/ph3450@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="./images/ph3354.jpg 1x, ./images/ph3354@2x.jpg 2x" media="(min-width: 768px)">
+                            <img src="./images/ph3.jpg" class="product__img" alt="Николай Тарасов">
+                        </picture>
         
                         <div class="team__content-wrap">
                             <div class="team__content">
@@ -341,7 +363,12 @@
         
                     </li>
                     <li class="team__item list">
-                        <img src="./images/ph4.jpg" class="team__img" alt="Михаил Ермаков">
+                        <picture>
+                            <source srcset="./images/ph4.jpg 1x, ./images/ph4@2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/ph4450.jpg 1x, ./images/ph4450@2x.jpg 2x" media="(max-width: 767px)">
+                            <source srcset="./images/ph4354.jpg 1x, ./images/ph4354@2x.jpg 2x" media="(min-width: 768px)">
+                            <img src="./images/ph4.jpg" class="product__img" alt="Михаил Ермаков">
+                        </picture>
         
                         <div class="team__content-wrap">
                             <div class="team__content">
