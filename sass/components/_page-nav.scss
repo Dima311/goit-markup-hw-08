@@ -32,7 +32,7 @@
     // outline: 2px solid skyblue;
 
     @media screen and (max-width: $tablet - 1px) {
-      flex-grow: 8;
+      flex-grow: 1;
     }
 
     @media screen and (min-width: $tablet) {
@@ -47,11 +47,15 @@
 
   &__list &__link {
     display: block;
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 500;
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: $titleColor;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 40px;
+    }
 
     @media screen and (min-width: $tablet) {
       position: relative;
@@ -62,7 +66,12 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (max-width: $tablet - 1px) {
+    @media screen and (max-width: $mobile - 1px) {
+      margin-bottom: 26px;
+    }
+    // margin-bottom: 22px;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet - 1px) {
       margin-bottom: 32px;
     }
   }
@@ -98,8 +107,6 @@
   }
 
   &__menu-icon {
-    // width: 40px;
-    // height: 40px;
   }
 
   &__icon-menu {
@@ -124,6 +131,14 @@
   &__mobile-menu {
     background-color: $primryBackgroudColor;
 
+    // @media screen and (max-width: $mobile - 1px) {
+    //   padding: 28px 20px;
+    // }
+
+    // @media screen and (min-width: $mobile) and (max-width: $tablet - 1px) {
+    //   padding: 48px 40px;
+    // }
+
     @media screen and (max-width: $tablet - 1px) {
       display: none;
       position: absolute;
@@ -134,10 +149,10 @@
       padding: 48px 40px;
 
       &.is-open {
-        // display: block;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        z-index: 998;
       }
     }
 
